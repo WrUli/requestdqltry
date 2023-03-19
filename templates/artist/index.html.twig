@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les artistes{% endblock %}
+
+{% block body %}
+
+    <h2 class='musich2'> Tous nos artistes ✅</h2>
+
+    {% for artist in artists %}
+        <p>{{artist.name}}</p><br>
+    {% endfor %}
+
+
+    <h2 class='musich2'>Ajouter un artiste ✅</h2>
+            
+    <section>
+        {{form(form)}}
+    </section>
+
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos musiques{% endblock %}
+
+{% block body %}
+
+    <h2 class='musich2'>Notre catalogue de sons ✅</h2>
+    
+
+    <section class='musicsContainer' >
+        {% for musique in musiques %}
+            <a href="{{ path('app_musique_show', {'id': musique.id}) }}">
+                <div class='musicContainer'>
+                    <img src="{{ asset('uploadDirectory/' ~ musique.img) }}" alt="{{ musique.name }}"><br>
+                    <p>{{ musique.name }} - {{ musique.artist_name }}</p><br>
+                    {# <p>{{ musique.name }} - {{musique.artist.name}}</p><br> #}
+                    {# <p> Année : {{musique.date|date("Y")}}</p><br> #}
+                    <p>{{ musique.style_name }}</p><br>
+
+                </div>
+            </a>
+            
+            {# <a href="{{ path('app_musique_show', {'id': musique.id}) }}">show</a>
+            <a href="{{ path('app_musique_edit', {'id': musique.id}) }}">edit</a> #}
+        {% endfor %}
+    </section>
+    
+
+    <h2 class='musich2'>Ajouter une musique ✅</h2>
+
+    <section>
+        {{form(form)}}
+    </section>
+
+
+{% endblock %}

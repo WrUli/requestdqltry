@@ -1,0 +1,9 @@
+<header>
+    <h1>DQL PRACTICE ✅ MusiK</h1>
+    <ul class="header_ul">
+        {# get dans la route, si c'est articles dans la route alors ça ajoute la class pathActive #}
+        <li><a class="{{app.request.get('_route') == 'app_musique' ? 'pathActive'}}" href="{{ path('app_musique') }}">Accueil</a></li>
+        <li><a class="{{app.request.get('_route') == 'app_artist' ? 'pathActive'}}" href="{{ path('app_artist') }}">Ajouter un nouvel artiste</a></li>
+        <li><a class="{{app.request.get('_route') == 'app_style' ? 'pathActive'}}" href="{{ path('app_style') }}">Ajouter un nouveau genre</a></li>
+    </ul>
+</header>

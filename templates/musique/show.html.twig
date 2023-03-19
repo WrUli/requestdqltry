@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos musiques{% endblock %}
+
+{% block body %}
+
+    {{ dump(musique) }}
+
+    <section class='musicsContainer' >
+        <article class="musiccontainer">
+            <img src="{{ asset('uploadDirectory/' ~ musique.img)}}" alt="{{musique.name}}"><br>
+            <p>{{ musique.name }} - {{ musique.artist_name }}</p><br>
+            {# <p>{{ musique.name }} - {{musique.artist.name}}</p><br> #}
+            {# <p> Année : {{musique.date|date("Y")}}</p><br> #}
+            <p>{{ musique.style_name }}</p><br>
+        </article>
+    </section>
+    
+
+
+{% endblock %}

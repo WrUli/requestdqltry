@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les genres{% endblock %}
+
+{% block body %}
+
+    <h2 class='musich2' > Tous nos styles de musique ✅</h2>
+
+    {% for style in styles %}
+        <p>{{style.name}}</p><br>
+    {% endfor %}
+
+
+    <h2 class='musich2'>Ajouter un genre musical ✅</h2>
+            
+    <section>
+        {{form(form)}}
+    </section>
+
+
+{% endblock %}
